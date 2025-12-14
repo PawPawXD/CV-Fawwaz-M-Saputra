@@ -1,0 +1,247 @@
+/* RESET SEDERHANA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Desain Font dan Warna */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    color: #333;
+    background-color: #0D0D0D;
+}
+
+/* Ukuran kertas A4 */
+.cv-container {
+    width: 60em;
+    margin: 30px auto;
+    background-color: #ffffffda;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 0;
+}
+
+/* Bagian Header untuk Nama & Foto */
+.header {
+    padding: 40px 40px 40px 50px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-info {
+    flex-grow: 1;
+    margin-left: 120px;
+}
+
+.profile-info h1 {
+    font-size: 20pt;
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: #000;
+}
+
+.profile-info .subtitle {
+    font-size: 11pt;
+    font-weight: 400;
+    color: #555;
+    margin-top: 0;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    /*border-radius: 50%;*/
+    overflow: hidden;
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    border: 1px solid #ccc;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Main Content*/
+.main-content {
+    display: flex;
+    height: 100%;
+}
+
+/* Kolom Kiri */
+.left-column {
+    width: 35%;
+    padding: 20px 20px 20px 40px;
+    background-color: #c2c5c5;
+    /* height: 100vh; */
+}
+
+strong {
+    color: #020659;
+}
+
+/* Kolom Kanan */
+.right-column {
+    width: 65%;
+    padding: 20px 40px 20px 20px;
+
+}
+
+/* Judul Kolom Kiri (Kontak, Keahlian, Profil, DLL.) */
+h2 {
+    font-size: 11pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #020659;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #020659;
+}
+
+/* Penyesuaian Kolom Kiri */
+.left-column h2 {
+    border-bottom: 3px solid #020659;
+    margin-top: 15px;
+}
+
+.left-column h2:first-child {
+    margin-top: 0;
+}
+
+/* Isi pada Kolom Kiri */
+.section-block {
+    margin-bottom: 20px;
+}
+
+/* Bagian Keahlian & Software */
+.left-column ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.left-column ul li {
+    margin-bottom: 5px;
+}
+
+/* Bagian Kontak */
+.contact p {
+    margin-bottom: 2px;
+}
+
+/* Bagian Profile*/
+.profile p {
+    text-align: justify;
+}
+
+/* Bagian Pengalaman Kerja */
+.experience-item {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10pt;
+    margin-bottom: 2px;
+}
+
+.experience-item .title {
+    font-weight: 700;
+}
+
+.experience-item .company {
+    font-size: 9pt;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.experience-item .date-range {
+    font-size: 9pt;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.job-description {
+    padding-left: 15px;
+    font-size: 9.5pt;
+}
+
+/* Bagiann Pendidikan */
+.education-item {
+    margin-bottom: 10px;
+}
+
+.education-item .title {
+    font-weight: 700;
+}
+
+.education-item p {
+    margin: 0;
+}
+
+/* Penyesuaian Khusus Untuk Kolom Kanan */
+.right-column .experience h2:nth-of-type(2) {
+    margin-top: 20px;
+    padding-top: 15px;
+}
+
+/* Untuk tampilan Mobile */
+@media (max-width: 768px) {
+
+    /* container full layar */
+    .cv-container {
+        width: 100%;
+        margin: 0;
+        min-height: auto;
+    }
+
+    /* Header Mobile */
+    .header {
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .profile-image {
+        position: static;
+        margin: 0 auto 15px auto;
+    }
+
+    .profile-info {
+        margin-left: 0;
+    }
+
+    /* Konten 1 Kolom */
+    .main-content {
+        flex-direction: column;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+
+    /* Sidebar di mobile tetap abu */
+    .left-column {
+        background-color: #ffffffda;
+    }
+}
